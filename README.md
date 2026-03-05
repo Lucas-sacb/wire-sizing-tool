@@ -95,16 +95,18 @@ A graph of **AWG vs power loss** is also generated automatically.
 
 The sizing algorithm combines **electrical and thermal constraints**.
 
+---
+
 ## Peak Current
 
-[
+$$
 I_{peak} = \frac{P}{V}
-]
+$$
 
 Where:
 
-* (P) = motor peak power
-* (V) = battery voltage
+- $P$ = motor peak power  
+- $V$ = battery voltage  
 
 ---
 
@@ -112,7 +114,7 @@ Where:
 
 The thermal load is computed using the RMS current over the mission:
 
-[
+$$
 I_{RMS} =
 \sqrt{
 \frac{
@@ -120,13 +122,13 @@ I_{peak}^2 t_{peak} +
 I_{cruise}^2 (t_{total}-t_{peak})
 }{t_{total}}
 }
-]
+$$
 
 Where:
 
-* (t_{peak}) = takeoff duration
-* (t_{total}) = mission time
-* (I_{cruise}) = cruise current
+- $t_{peak}$ = takeoff duration  
+- $t_{total}$ = mission time  
+- $I_{cruise}$ = cruise current  
 
 ---
 
@@ -134,17 +136,17 @@ Where:
 
 Maximum voltage drop is limited by:
 
-[
-\Delta V \leq 2%
-]
+$$
+\Delta V \leq 2\%
+$$
 
 This follows common aviation practices (e.g. FAA AC 43.13-1B).
 
 Wire cross-section must satisfy:
 
-[
+$$
 A \geq \frac{\rho L I}{\Delta V}
-]
+$$
 
 ---
 
@@ -152,9 +154,9 @@ A \geq \frac{\rho L I}{\Delta V}
 
 Current density limit:
 
-[
+$$
 J = \frac{I}{A}
-]
+$$
 
 Typical silicone wire safe density:
 
@@ -164,17 +166,20 @@ J_max ≈ 20 A/mm²
 
 ---
 
+
+---
+
 ## Electrical Losses
 
-[
+$$
 P_{loss} = I^2 R
-]
+$$
 
 Where:
 
-[
+$$
 R = \frac{\rho L}{A}
-]
+$$
 
 ---
 
@@ -182,14 +187,14 @@ R = \frac{\rho L}{A}
 
 Thermal equilibrium is estimated via convective cooling:
 
-[
+$$
 P_{loss} = h A_{surf} (T - T_{amb})
-]
+$$
 
 Where:
 
-* (h) = convection coefficient
-* (A_{surf}) = wire surface area
+- $h$ = convection coefficient  
+- $A_{surf}$ = wire surface area
 
 ---
 
