@@ -34,7 +34,7 @@ The tool estimates the **minimum AWG wire size** required based on electrical, t
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/wire-sizing-tool.git
+git clone https://github.com/Lucas-sacb/wire-sizing-tool.git
 cd wire-sizing-tool
 ```
 
@@ -61,7 +61,7 @@ Motor peak power [W]: 3000
 Battery voltage [V]: 22.2
 Wire length (one direction) [m]: 0.5
 Takeoff time [s]: 4
-Total flight time [s]: 300
+Total flight time [s]: 400
 ```
 
 Example output:
@@ -76,10 +76,15 @@ Minimum area required: 4.11 mm²
 
 AWG analysis:
 
-AWG 20 | Loss = 152.33 W | Mass = 4.7 g | Efficiency = 95.14% | Temp = 318.4 °C | NOT SAFE
-AWG 16 | Loss = 49.40 W  | Mass = 11.7 g | Efficiency = 98.38% | Temp = 174.9 °C | SAFE
-AWG 12 | Loss = 20.02 W  | Mass = 29.6 g | Efficiency = 99.34% | Temp = 90.5 °C | SAFE
-AWG 10 | Loss = 12.62 W  | Mass = 47.1 g | Efficiency = 99.58% | Temp = 63.2 °C | SAFE
+AWG  4 | Loss =  14.51 W | Mass =  189.5 g | Efficiency = 99.52% | Temp =   50.4 °C | SAFE
+AWG  6 | Loss =  23.07 W | Mass =  119.2 g | Efficiency = 99.24% | Temp =   76.0 °C | SAFE
+AWG  8 | Loss =  36.65 W | Mass =   75.0 g | Efficiency = 98.79% | Temp =  127.1 °C | SAFE
+AWG 10 | Loss =  58.33 W | Mass =   47.1 g | Efficiency = 98.09% | Temp =  230.0 °C | SAFE
+AWG 12 | Loss =  92.69 W | Mass =   29.7 g | Efficiency = 97.00% | Temp =  435.6 °C | NOT SAFE
+AWG 14 | Loss = 147.50 W | Mass =   18.6 g | Efficiency = 95.31% | Temp =  849.3 °C | NOT SAFE
+AWG 16 | Loss = 234.19 W | Mass =   11.7 g | Efficiency = 92.76% | Temp = 1674.2 °C | NOT SAFE
+AWG 18 | Loss = 374.14 W | Mass =    7.3 g | Efficiency = 88.91% | Temp = 3355.1 °C | NOT SAFE
+AWG 20 | Loss = 589.99 W | Mass =    4.7 g | Efficiency = 83.57% | Temp = 6619.3 °C | NOT SAFE
 ```
 
 A graph of **AWG vs power loss** is also generated automatically.
